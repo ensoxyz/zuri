@@ -1,0 +1,93 @@
+for i in (1..9)
+	//_red
+	._red{i},#_red{i}
+		color: rgba(_blk1,.75)
+		background: rgba(_red+i,1)
+	//_orange	
+	._org{i},#_org{i}
+		color: rgba(_gry9,.75)
+		background: rgba(_org+i,1)
+	//_yellow
+	._ylw{i},#_ylw{i}
+		color: rgba(_gry9,.75)
+		background: rgba(_ylw+i,1)
+	//_green	
+	._grn{i},#_grn{i}
+		color: rgba(_blk4,.75)
+		background: rgba(_grn+i,1)
+	//_blue	
+	._blu{i},#_blu{i}
+		color: rgba(_blk4,.75)
+		background: rgba(_blu+i,1)
+	//_violet	
+	._vlt{i},#_vlt{i}
+		color: rgba(_wht3,.75)
+		background: rgba(_vlt+i,1)
+	//_cyan	
+	._cyn{i},#_cyn{i}
+		color: rgba(_blk4,.75)
+		background: rgba(_cyn+i,1)
+	//_magenta	
+	._mgt{i},#_mgt{i}
+		color: rgba(_blk4,.75)
+		background: rgba(_mgt+i,1)
+	//_brown	
+	._brw{i},#_brw{i}
+		color: rgba(_gry4,.75)
+		background: rgba(_brw+i,1)
+	//_black	
+	._blk{i},#_blk{i}
+		color: rgba(_gry5,.75)
+		background: rgba(_blk+i,1) 
+	//_grey	
+	._gry{i},#_gry{i}
+		color: rgba(_blk6,.75)
+		background: rgba(_gry+i,1)
+	//_white	
+	._wht{i},#_wht{i}
+		color: rgba(_gry9,.75)
+		background: rgba(_wht+i,1)
+
+for i in (1..9)
+	for e in (1..9)
+		//_red
+		._red{i}_{e},#_red{i}_{e}
+			color: rgb(_blk1)
+			background: rgba(_red+i,( e / 10 ))
+		//_orange	
+		._org{i}_{e},#_org{i}_{e}
+			color: rgb(_blk1)
+			background: rgba(_org+i,( e / 10 ))	
+		//_yellow	
+		._ylw{i}_{e},#_ylw{i}_{e}
+			color: rgb(_gry8)
+			background: rgba(_ylw+i,( e / 10 ))	
+		//_green	
+		._grn{i}_{e},#_grn{i}_{e}
+			color: rgb(_blk2)
+			background: rgba(_grn+i,( e / 10 ))
+		//_blue	
+		._blu{i}_{e},#_blu{i}_{e}
+			color: rgb(_blk2)
+			background: rgba(_blu+i,( e / 10 ))
+		//_violet	
+		._vlt{i}_{e},#_vlt{i}_{e}
+			background: rgba(_vlt+i,( e / 10 ))
+		//_cyan	
+		._cyn{i}_{e},#_cyn{i}_{e}
+			background: rgba(_cyn+i,( e / 10 ))	
+		//_magenta	
+		._mgt{i}_{e},#_mgt{i}_{e}
+			background: rgba(_mgt+i,( e / 10 ))
+		//_brown	
+		._brw{i}_{e},#_brw{i}_{e}
+			background: rgba(_brw+i,( e / 10 ))	
+		//_black	
+		._blk{i}_{e},#_blk{i}_{e}
+			background: rgba(_blk+i,( e / 10 ))
+		//_grey	
+		._gry{i}_{e},#_gry{i}_{e}
+			background: rgba(_gry+i,( e / 10 ))
+		//_white	
+		._wht{i}_{e},#_wht{i}_{e}
+			background: rgba(_wht+i,( e / 10 ))

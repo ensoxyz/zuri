@@ -1,0 +1,169 @@
+canvas_header_gradient = linear-gradient(180deg, rgba(229, 226, 217,1) 0%, rgba(229, 226, 217,1) 75%, rgba(229, 226, 217,0.9) 100%)
+
+canvas_footer_gradient = linear-gradient(0deg, rgba(229, 226, 217,1) 0%, rgba(229, 226, 217,1) 75%, rgba(229, 226, 217,0.9) 100%)
+
+h2_x = 100% / 3
+
+// canvas
+.canvas
+  background-color rgb(229, 226, 217)
+  f(flex, row, nowrap, se, fc, fc)
+  sqr(100%)
+
+.c1, .c2
+  f(flex, column, nowrap, fc, sb, fs)
+  sqrp(4px)
+
+// c1
+.canvas .c1
+  sqrw(80%)
+
+// c2
+.canvas .c2
+  background-color clr vip
+  sqrw(20%)
+  .notify
+    background-color rgba(#F9F6EF,0.24)
+    sqr(100%)
+
+@media screen and (max-width: 1024px)
+  .c1
+    sqr(100% vip)
+  .c2
+    display none vip
+
+.canvas header, .canvas footer 
+  f(flex, row, nowrap, sb, fc, fc)
+  w(100%, 100%, 100%)
+
+// HEADER
+.canvas header
+  background canvas_header_gradient
+  h(5%, 64px, 5%)
+  margin-top 0px
+
+  .h1
+    f(flex, row, nowrap, fs, fc, fc)
+    h(100%, 100%, 100%)
+    w(64px, 64px, 25%)
+    margin-left 0px
+    a
+      border-radius 96%
+      overflow hidden
+      display block
+      sqrw(64px)
+      sqrp(8px)
+    img
+      sqr(100%)
+      border-radius 96%
+      sqrb(2px,solid,rgba(#FF4F00,0.96))
+      box-shadow: 2px 2px 4px 2px rgba(48,48,48,0.24)
+
+  .h2
+    f(flex, column, nowrap, sb, fc, fe)
+    w(480px, 240px, 75%)
+    h(100%, 100%, 100%)
+    p(0px,8px,0px,0px)
+    margin-right 0px
+    .h2_x
+      sqrh(h2_x)
+      m(0px,0px,0px,0px)
+      //p(1px,4px,0px,4px)
+      input
+        w(100%, 100%, 100%)
+        h(60%, 20px, 60%)
+        p(0px,0px,0px,0px)
+
+        outline none
+        background-color clr
+        letter-spacing 1px
+        b(0px,0px,1px,0px,solid,black)
+      span
+        f(flex, row, nowrap, se, fc, fc)
+        sqr(100%)
+        b 
+          font-family 'Source Code Pro'
+          font-size 12px vip
+          line-height 22px
+          margin-left 0px
+          sqrw(100% / 2)
+          letter-spacing 1px
+          color #000000
+        
+        b:nth-child(1)
+          text-align left vip 
+          font-weight 200
+        b:nth-child(2)
+          text-align right vip 
+          font-weight 400
+        a
+          font-family 'Source Code Pro'
+          font-weight 400
+          font-size 20px
+          margin-right 0px
+          text-align right
+          color #FF4F00
+          sqrw(50%)
+          :hover
+            font-weight 800
+
+// MAIN
+.canvas main
+  w(100%, 100%, 100%)
+  h(90%, 320px, 90%)
+
+// FOOTER
+.canvas footer
+  background canvas_footer_gradient
+  margin-bottom 0px
+  h(5%, 48px, 5%)
+  nav
+    f(flex, row, nowrap, fc, fc, fc)
+    sqr(100%)
+    ul
+      f(flex, row, nowrap, se, fc, fc)
+      w(480px, 240px, 100%)
+      h(100%, 100%, 100%)
+      list-style none
+
+      li
+        f(flex, row, nowrap, fc, fc, fc)
+        sqrw(100% / 5)
+        a
+          f(flex, row, nowrap, fc, fc, fc)
+
+        a:hover
+          opacity 0.88
+
+        a img, a + img
+          display block
+          sqr(16px)
+        
+      
+      :nth-child(1) 
+        a
+          font-family HKNova
+          p(0px,0px,0px,5px)
+          line-height 22px
+          font-size 24px
+          display block
+          color rgba(48,48,48,1)
+          sqr(24px)
+        b
+          font-size 20px
+          color #FF4F00
+
+      :nth-child(3) 
+        a
+          sqrb(2px,solid,rgba(48,48,48,0.96))
+          border-radius 96%
+          sqr(32px)
+        a:hover
+          // b(2px,1px,2px,1px,dotted,rgba(#FF4F00,0.96))
+          // transition-duration 0.48s
+          // transition-delay 0.24s
+          // img
+          //   opacity 0.48
+
+    
+  

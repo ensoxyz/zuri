@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <ellipse id="ellipse-1" cx="15" cy="15" rx="15" ry="15"/>
+    <mask id="mask-2" x="0" y="0" maskContentUnits="userSpaceOnUse" maskUnits="userSpaceOnUse">
+      <rect width="30" height="30" x="0" y="0" fill="black"/>
+      <use fill="white" xlink:href="#ellipse-1"/>
+    </mask>
+  </defs>
+  <use fill-opacity="0" stroke="#FF4F00" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="8" mask="url(#mask-2)" opacity="1" xlink:href="#ellipse-1"/>
+</svg>

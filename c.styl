@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&family=Source+Code+Pro:wght@300&display=swap');
+int_org = #FF4F00
+wht = #E6E2DB
+blk = #3E3A35
+
+*
+  font-family: 'Lexend Deca', 'Source Code Pro', monospace;
+  background-color: wht;
+  color: blk;
+
+.logo
+  opacity 0.99;
+  min-height: 100%;
+
+.logo img
+  width: 100%;
+  height 54px;
+  line-height: 44px
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+
+.c
+  width:   238px
+  height   238px
+  padding-top: 4px
+  padding-left: 4px
+  opacity 0.96
+  //border 1px dashed int_org
+ 
+
+.c ul
+  width: 100%;
+  height 72px;
+  margin-bottom 4px
+
+
+.c li
+  width: 72px;
+  height 72px;
+  float left
+  display: block
+  margin-right: 4px
+  text-align: center
+  line-height: 72px
+  border-radius: 4px
+  background: int_org
+
+
+    
+  
+.c li a
+  font-family: 'Lexend Deca'
+  text-decoration: none
+  font-size: 16px
+  width: 100%
+  height 100%
+  display: block
+  color: wht
+  
+
+
+@media screen and (max-width : 760px), (max-height: 480px)
+  .c
+    position: fixed
+    transform: rotate(180deg)
+    bottom: 0
+    right 0
+    padding-bottom: 4px
+    padding-right: 4px
+  .c li
+    transform: rotate(-180deg)
+    

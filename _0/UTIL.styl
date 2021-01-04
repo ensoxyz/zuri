@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;400&display=swap');
+
+@font-face {
+  font-family: HKNova;
+  src: url(/home/enso/.local/share/fonts/HKNova-MediumR.otf);
+}
+
+
+
+vip = !important
+
+:root
+  --wrpr100 100%
+  
+
+w(x,y,z)
+  max-width   x
+  min-width   y
+  width       z
+
+ww(x)
+  max-width   x
+  min-width   x
+  width       x
+
+h(x,y,z)
+  max-height  x
+  min-height  y
+  height      z
+
+hh(x,y,z)
+  max-height  x
+  min-height  x
+  height      x
+
+
+wh(x,y,z)
+  max-width   x
+  max-height  x
+  min-width   y
+  min-height  y
+  width       z
+  height      z
+
+nav(x,y)
+  width       x
+  height      y
+
+sqr(x)
+  max-height  x
+  min-height  x
+  max-width   x
+  min-width   x
+  height      x
+  width       x
+
+sqrh(x)
+  max-height  x
+  min-height  x
+  max-width   100%
+  min-width   100%
+  height      x
+  width       100%
+
+sqrw(x)
+  max-height  100%
+  min-height  100%
+  max-width   x
+  min-width   x
+  height      100%
+  width       x
+
+
+
+
+
+
+rct(x)
+  max-height  x
+  min-height  x
+  height      x
+  max-width   calc(x / 3)
+  min-width   calc(x / 3)
+  width       calc(x / 3)
+
+column(base)
+  max-width calc(base * 40)
+  min-width minw
+  width     100%
+
+m(t,r,b,l)
+  margin t r b l
+
+sqrm(x)
+  margin x x x x
+
+p(t,r,b,l)
+  padding t r b l
+
+sqrp(x)
+  padding x x x x
+
+b(t,r,b,l,s,c)
+  border-width t r b l
+  border-style s
+  border-color c
+
+sqrb(w,s,c)
+  border-width w
+  border-style s
+  border-color c
+
+blr(r,l,x,y)
+  border-right  r x y
+  border-left   l x y
+
+btb(t,b,x,y)
+  border-top    t x y
+  border-bottom b x y
+
+
+a
+  text-decoration none vip
+
+input 
+  background-color clr vip
+
+
+fs = flex-start
+fc = center
+fe = flex-end
+se = space-evenly
+sa = space-around
+sb = space-between
+
+f(a,b,c,x,y,z)
+  display         a
+  flex-flow       b c
+  justify-content x
+  align-content   y
+  align-items     z
+
+i(a,b,c,x,y)
+  flex            a b c
+  order           x
+  align-items     y
+
+
+
+
+clr = transparent
+
+_red1 = 255,205,210
+_red2 = 239,154,154
+_red3 = 229,115,115
+_red4 = 239,083,080
+_red5 = 244,067,054
+_red6 = 229,057,053
+_red7 = 211,047,047
+_red8 = 198,040,040
+_red9 = 183,028,028
+
+_org1 = 255,224,178
+_org2 = 255,204,128
+_org3 = 255,183,077
+_org4 = 255,167,038
+_org5 = 255,152,000
+_org6 = 251,140,000
+_org7 = 245,124,000
+_org8 = 239,108,000
+_org9 = 230,081,000
+
+_ylw1 = 255,252,168
+_ylw2 = 255,248,153
+_ylw3 = 255,241,112
+_ylw4 = 255,232,071
+_ylw5 = 255,221,031
+_ylw6 = 255,215,010
+_ylw7 = 245,200,000
+_ylw8 = 224,182,000
+_ylw9 = 204,163,000
+
+_grn1 = 235,255,168
+_grn2 = 219,255,153
+_grn3 = 197,247,121
+_grn4 = 170,236,090
+_grn5 = 140,223,063
+_grn6 = 107,206,039
+_grn7 = 079,172,032
+_grn8 = 053,138,025
+_grn9 = 032,104,018
+
+_blu1 = 187,222,251
+_blu2 = 144,202,249
+_blu3 = 100,181,246
+_blu4 = 066,165,245
+_blu5 = 033,150,243
+_blu6 = 030,136,229
+_blu7 = 025,118,210
+_blu8 = 021,101,192
+_blu9 = 013,071,161
+
+_vlt1 = 255,190,231
+_vlt2 = 206,147,216
+_vlt3 = 186,104,200
+_vlt4 = 171,071,188
+_vlt5 = 156,039,176
+_vlt6 = 142,036,170
+_vlt7 = 123,031,161
+_vlt8 = 106,027,154
+_vlt9 = 074,020,140
+
+_cyn1 = 178,235,242
+_cyn2 = 128,222,234
+_cyn3 = 077,208,225
+_cyn4 = 038,198,218
+_cyn5 = 000,188,212
+_cyn6 = 000,172,193
+_cyn7 = 000,151,167
+_cyn8 = 000,131,143
+_cyn9 = 000,096,100
+
+_mgt1 = 254,195,238
+_mgt2 = 254,154,227
+_mgt3 = 254,113,217
+_mgt4 = 253,073,205
+_mgt5 = 253,033,194
+_mgt6 = 237,007,184
+_mgt7 = 198,006,160
+_mgt8 = 159,004,133
+_mgt9 = 122,000,122
+
+_brw1 = 220,204,188
+_brw2 = 212,182,155
+_brw3 = 207,160,119
+_brw4 = 206,135,080
+_brw5 = 201,109,044
+_brw6 = 175,087,029
+_brw7 = 147,067,016
+_brw8 = 115,047,007
+_brw9 = 080,029,002
+
+_blk1 = 046,046,046
+_blk2 = 040,040,040
+_blk3 = 036,036,036
+_blk4 = 030,030,030
+_blk5 = 024,024,024
+_blk6 = 018,018,018
+_blk7 = 012,012,012
+_blk8 = 006,006,006
+_blk9 = 001,001,001
+
+_gry1 = 184,184,184
+_gry2 = 168,168,168
+_gry3 = 152,152,152
+_gry4 = 136,136,136
+_gry5 = 120,120,120
+_gry6 = 104,104,104
+_gry7 = 088,088,088
+_gry8 = 072,072,072
+_gry9 = 056,056,056
+
+_wht1 = 250,250,250
+_wht2 = 245,245,245
+_wht3 = 240,240,240
+_wht4 = 235,235,235
+_wht5 = 230,230,230
+_wht6 = 225,225,225
+_wht7 = 220,220,220
+_wht8 = 215,215,215
+_wht9 = 210,210,210
+
+_wht = #F9F6EF  //#f6f1eb
+_gry = #EBEBE3
+_blk = #242424
+_red = #CD212A
+_org = #FF4F00
+_ylw = #FFCC00
+_grn = #008C45
+_blu = #5A87C5
+_gld = #C98721
+
+
+
+
+
+
+
+// TO:EDO CONVERT TO SELF HOSTED FIREBASE DYNAMIC LINKS
+_remote =
+  icon  = url('https://tinyurl.com/gf-icons')
+  serif = url('https://tinyurl.com/gf-serif')
+  sans  = url('https://tinyurl.com/gf-sans')
+  mono  = url('https://tinyurl.com/gf-mono')
+
+// ms =
+// 	src url(../_1/@FF/ms.woff2) format('woff2')
+// ss =
+// 	src url(../_1/@FF/ss.woff2) format('woff2')
+// s =
+// 	src url(../_1/@FF/s.woff2) format('woff2')
+// i =
+// 	src url(../_1/@FF/i.woff2) format('woff2')
+// b =
+// 	src url(../_1/@FF/b.woff2) format('woff2')
+

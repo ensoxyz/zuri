@@ -1,2 +1,0 @@
-# zuri
-Simply Beautiful

@@ -6,29 +6,29 @@
 | svg	 		   | video    	|            |            | 
 */
 
-img
-  w(100%, c/45, 100%)
-  h(100%, c/45, auto)
-  object-fit cover
-  display block
-
-video
-  background-color #000
-  object-fit cover
-  opacity 0.9
-  sqr(100%)
-
+img {
+  @mixin w(100%, c/45, 100%);
+  @mixin h(100%, c/45, auto);
+  object-fit: cover;
+  display: block;
+}
+video {
+  background-color: #000;
+  object-fit: cover;
+  opacity: 0.9;
+  @mixin sqr(100%);
+}
 @import 'CNVS'
 
-#mp4
-  w(960px, 320px, 100%)
-  h(960px, 160px, 100%)
-  background-color pink
-
-#expo
-  f(flex, row, nowrap, se, fc, fc)
-  w(c, c / 9, 100%)
-  h(100%, c / 6, 100%)
-  sqrp(1px)
-
+#mp4 {
+  @mixin w(960px, 320px, 100%);
+  @mixin h(960px, 160px, 100%);
+  background-color: pink;
+}
+#expo {
+  @mixin f(flex, row, nowrap, se, fc, fc);
+  @mixin w(c, c / 9, 100%);
+  @mixin h(100%, c / 6, 100%);
+  @mixin sqrp(1px);
+}
 @import '../_2/GRID'

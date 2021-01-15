@@ -20,277 +20,334 @@
 | sup        | u          | var        |            |
 */	
 
-_h6 = _base
-_h5 = (_h6 + 8)
-_h4 = (_h6 * 2)
-_h3 = (_h4 + 8)
-_h2 = (_h6 * 3)
-_h1 = (_h2 + 8)
+$h6: $base;
+$h5: $h6 + 8;
+$h4: $h6 * 2;
+$h3: $h4 + 8;
+$h2: $h6 * 3;
+$h1: $h2 + 8;
 
-_sm = _base
-_xs = (_sm - 4)
-_md = (_sm + 4)
-_lg = (_md + 4)
-_xl = (_lg + 4)
-_2x = (_sm * 2)
-_3x = (_sm * 3)
-_4x = (_sm * 4)
-_5x = (_sm * 5)
-_6x = (_sm * 6)
-_7x = (_sm * 7)
-_8x = (_sm * 8)
-_9x = (_sm * 9)
+$sm: $base;
+$xs: $sm - 4;
+$md: $sm + 4;
+$lg: $md + 4;
+$xl: $lg + 4;
+$2x: $sm * 2;
+$3x: $sm * 3;
+$4x: $sm * 4;
+$5x: $sm * 5;
+$6x: $sm * 6;
+$7x: $sm * 7;
+$8x: $sm * 8;
+$9x: $sm * 9;
 
-@font-face
+@font-face {
 	font-family i
-	{_i}
+	{$_i}
+}
 
-@font-face
+@font-face {
 	font-family b
-	{_b}
+	{$_b}
+}
 
-@font-face
+@font-face {
 	font-family s
-	{_s}
+	{$_s}
+}
 
-@font-face
+@font-face {
 	font-family ss
-	{_ss}
+	{$_ss}
 
-@font-face
+@font-face {
 	font-family ms
-	{_ms}
+	{$_ms}
+}
 
-._i,#_i
+.i,#_i {
 	font-family i
+}
 
-._b,#_b 
+.b,#_b {
 	font-family b
+}
 
-._s,#_s
+.s,#_s {
 	font-family s
+}
 
-._ss,#_ss
+.ss,#_ss {
 	font-family ss
+}
 
-._ms,#_ms
+.ms,#_ms {
 	font-family ms
+}
 
-h1 h2 h3 h4 h5 h6
-	font-weight 400
+h1 h2 h3 h4 h5 h6 {
+	font-weight: 400
 	line-height 1.1
+}
 
-for i in (1..6)
-	h{i}
-		font-size _m = _h + i px
-		font-size ((_m / 10 rem))
-		line-height 110%
-		margin ((_m / 2)) 0 ((_m / 2.5)) 0
+@for $_ from 1 through 6 {
+	h#{$_}
+		font-size: : $_m: $_h + #{$_} px;
+		font-size: : (($_m / 10 rem));
+		line-height: 110%;
+		margin:: (($_m / 2)) 0 (($_m / 2.5)) 0;
+}
+.xs, #_xs {
+	font-size: : $xs px
+	font-size: : (($xs / 10 rem))						
+}
+.sm, #sm {
+	font-size:  $sm px
+	font-size:  (($sm / 10 rem))
+}
+.md, #md {
+	font-size:  $md px
+	font-size:  (($md / 10 rem))
+}
+.lg, #lg { 
+	font-size:  $lg px
+	font-size:  (($lg / 10 rem))
+}	
+.xl, #xl { 
+	font-size:  $xl px
+	font-size:  (($xl / 10 rem))
+}
+.2x, #2x {
+	font-size:  $2x px
+	font-size:  (($2x / 10 rem))
+}		
+.3x, #3x { 
+	font-size:  $3x px
+	font-size:  (($3x / 10 rem))
+}	
+.4x, #4x { 
+	font-size:  $4x px
+	font-size:  (($4x / 10 rem))
+}
+.5x, #5x { 
+	font-size:  $5x px
+	font-size:  (($5x / 10 rem))
+}
+.6x, #6x { 
+	font-size:  $6x px
+	font-size:  (($6x / 10 rem))
+}
+.7x, #7x { 
+	font-size:  $7x px
+	font-size:  (($7x / 10 rem))
+}
+.8x, #8x { 
+	font-size:  $8x px
+	font-size:  (($8x / 10 rem))
+}
+.9x, #9x {
+	font-size:  $9x px
+	font-size:  (($9x / 10 rem))
+}
+._base, #_base {
+	font-size:  $base px
+	font-size:  (($base / 10 rem))
+}
 
-._xs, #_xs 
-	font-size _xs px
-	font-size ((_xs / 10 rem))						
-
-._sm, #_sm 
-	font-size _sm px
-	font-size ((_sm / 10 rem))
-
-._md, #_md 
-	font-size _md px
-	font-size ((_md / 10 rem))
-
-._lg, #_lg 
-	font-size _lg px
-	font-size ((_lg / 10 rem))
-	
-._xl, #_xl 
-	font-size _xl px
-	font-size ((_xl / 10 rem))
-	
-._2x, #_2x 
-	font-size _2x px
-	font-size ((_2x / 10 rem))
-		
-._3x, #_3x 
-	font-size _3x px
-	font-size ((_3x / 10 rem))
-	
-._4x, #_4x 
-	font-size _4x px
-	font-size ((_4x / 10 rem))
-
-._5x, #_5x 
-	font-size _5x px
-	font-size ((_5x / 10 rem))
-
-._6x, #_6x 
-	font-size _6x px
-	font-size ((_6x / 10 rem))
-
-._7x, #_7x 
-	font-size _7x px
-	font-size ((_7x / 10 rem))
-
-._8x, #_8x 
-	font-size _8x px
-	font-size ((_8x / 10 rem))
-
-._9x, #_9x 
-	font-size _9x px
-	font-size ((_9x / 10 rem))
-	
-._base, #_base 
-	font-size _base px
-	font-size ((_base / 10 rem))
-
-
-a
-	-webkit-text-decoration-skip objects 
-	background-color _clear
-	text-decoration none
-	text-align center
-	display block
-
+a {
+	-webkit-text-decoration-skip: objects; 
+	background-color: $clr;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+}
 a:active, 
-a:hover
+a:hover {
 	color: blue;
 	outline: 0;
+}
 
 /*
 abbr[title],
 acronym[title], 
-dfn[title]
-	border none
-	text-decoration none
-	text-decoration underline dotted
+dfn[title] {
+	border: none;
+	text-decoration: none;
+	text-decoration: underline dotted;
+}
 */
-address
-	_oblique
-b
-	text-decoration underline
-	font-weight inherit
-	font-weight 800
+
+address {
+	$oblique;
+}
+
+b {
+	text-decoration: underline;
+	font-weight: inherit;
+	font-weight: 800;
+}
+
 
 bdi
 bdo
 blockquote, 
-q
-    quotes none !important
+q {
+    quotes: none $vip;
 
 blockquote:before, 
 blockquote:after, 
 q:before, 
 q:after,
 li:before,
-li:after
-    content "" !important
+li:after{
+    content: "" $vip
+}
 
-blockquote
-	border-bottom 1px solid #d7d7d7
-	border-top 1px solid #d7d7d7
-	min-height 128px
-	padding 2em 0
-	margin 20 0
-	width 100%
+blockquote {
+	border-bottom: 1px solid #d7d7d7;
+	border-top: 1px solid #d7d7d7;
+	min-height: 128px;
+	padding: 2em 0;
+	margin: 20 0;
+	width: 100%;
+}
 
-br
-	padding 1em
-	width 100%
-	margin 1em
-caption
-cite
-	_oblique
-code
-	white-space wrap
-	display block
+br {
+	padding: 1em;
+	width: 100%;
+	margin: 1em;
+}
+//caption
 
-code kbd, pre, samp
-  font-family _ms
-del
-	opacity .95
-dfn
-	text-decoration line-through
-	_oblique
-em
-	_underline
-	_oblique
-	color _mode
-figcaption
-h1
-h2
-h3
-h4
-h5
-h6
-hr
-	margin-bottom 1em
-	overflow hidden
-	width 100%
-	height 0
-i 
-	_underline
-	_oblique
-	color _gry2
-ins
-	background-color #FFCC00
-	text-decoration none
-	color _mode
+cite {
+	$oblique
+}
 
-kbd
-mark
-	vertical-align bottom
-	text-decoration: none
-	background-color #FFCC00
-	//color 
-	border-radius 2px
-	position relative
-	white-space wrap
-	padding 0.25%
-	outline none
-	border none
-p
-	text-align justify
-	position relative
-	display block
-	margin-top 0
-	height auto
-	width 100%
-pre
-	white-space pre _vip
-	color rgba_blk3 0.75
-q
-	border-bottom 1px solid #d7d7d7
-	border-top 1px solid #d7d7d7
-	padding 2em 2em 2em 2em
-	position relative
-	margin-top 2em
-	line-height 2
-	display block
-	quotes: "" ""
-	height auto
-	width 100%
-ruby
-s
-samp
-small
-	font-size _sm
-	color rgba_blk3 0.75
-strong
-	font-weight inherit
-	font-weight 700
-sub, sup
-    font-size 75% !important
-    line-height 0 !important
-    position relative !important
-    vertical-align baseline !important
-sub 
-    bottom -0.25em !important
-		color rgba_blk3 0.75
-summary
-	color rgba_blk3 0.75
-sup
-    top -0.5em !important
-		color rgba_blk3 0.75 
-u
-	color rgba_blk3 0.75
-var
+code {
+	white-space: wrap;
+	display: block;
+}
+
+code kbd, pre, samp{
+  font-family: $ms;
+}
+
+del {
+	opacity: .95;
+}
+
+dfn {
+	text-decoration: line-through;
+	$oblique;
+}
+
+em {
+	$underline;
+	$oblique;
+	color: $mode;
+}
+
+//figcaption
+//h1
+//h2
+//h3
+//h4
+//h5
+//h6
+hr {
+	margin-bottom: 1em;
+	overflow: hidden;
+	width: 100%;
+	height: 0;
+}
+
+i { 
+	$underline;
+	$oblique;
+	color: $gry;
+}
+
+ins {
+	background-color: #FFCC00;
+	text-decoration: none;
+	color: $mode;
+}
+
+//kbd
+
+mark {
+	vertical-align: bottom;
+	text-decoration: none;
+	background-color: #FFCC00;
+	//color: 
+	border-radius: 2px;
+	position: relative;
+	white-space: wrap;
+	padding: 0.25%;
+	outline: none;
+	border: none;
+}
+p {
+	text-align: justify;
+	position: relative;
+	display: block;
+	margin-top: 0;
+	height: auto;
+	width: 100%;
+}
+pre {
+	white-space: pre $vip;
+	color: rgba_blk3 0.75;
+}
+
+q {
+	border-bottom: 1px solid #d7d7d7;
+	border-top: 1px solid #d7d7d7;
+	padding: 2em 2em 2em 2em;
+	position: relative;
+	margin-top: 2em;
+	line-height: 2;
+	display: block;
+	quotes: "" "";
+	height: auto;
+	width: 100%;
+}
+//ruby
+//s
+//samp
+small {
+	font-size:  $sm;
+	color: rgba_blk3 0.75;
+}
+
+strong {
+	font-weight: inherit;
+	font-weight: 700;
+}
+
+sub, sup {
+    font-size:  75% $vip;
+    line-height: 0 $vip;
+    position: relative $vip;
+    vertical-align: baseline $vip;
+}
+
+sub { 
+    bottom: -0.25em $vip;
+	color: rgba_blk3 0.75;
+}
+
+summary {
+	color: rgba_blk3 0.75;
+}
+
+sup {
+    top: -0.5em $vip;
+	color: rgba_blk3 0.75; 
+}
+
+u {
+	color: rgba_blk3 0.75;
+}
+
+//var

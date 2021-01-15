@@ -1,23 +1,29 @@
 @import ../_0/ZERO
 
-html, body
-  min-height: 100%
-  min-width: $minw
-  max-width: $maxw 
-  height: 100%
-  margin: auto
+html, body{
+  min-height: 100%;
+  min-width: $minw;
+  max-width: $maxw; 
+  height: 100%;
+  margin: auto;
+}
 
-html
-  //$dm($bg, $fg, $dark-mode)
-  width: 100%
+html{
+  $dm($bg, $fg, $dark-mode)
+  width: 100%;
+}
 
-body
-  width: auto
+body{
+  width: auto;
+}
 
-body *
-  scrollbar-width: none
-  ::-webkit-scrollbar
-    display: none
+body *{
+  scrollbar-width: none;
+
+  ::-webkit-scrollbar{
+    display: none;
+    }
+}
 
 // @import ../_2/ARCH
 // @import ../_1/TYPE

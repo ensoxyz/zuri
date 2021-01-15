@@ -1,10 +1,7 @@
-//| WWW/USING     | BROWSER        | MOBILE         | DESKTOP		   |		
-//| HTML5  84.00% | Chrome  65.89% | Android 36.06% |	Windows 36.05% |	
-//| CSS3   95.04% | Safari  16.65% | iOS     14.22% |	macOS	07.91% |	
-//| ES6	   96.07% | FireFox 04.26% |                |                  |
-//| ERLANG 00.10% | Edge    01.91% |                |                  |
+/*
+züri - simply beautiful.
+*/
 
-@import '_0/UTIL';
 
 // ARCHITCTURE | DOING |
 //  - ZERO     | DONE  |
@@ -35,6 +32,7 @@
 // COLOR       | 
 // TYPOGRAPHY  |
 
+@import '_0/UTIL';
 
 $base: 16px;
 $minw: $base * 20;

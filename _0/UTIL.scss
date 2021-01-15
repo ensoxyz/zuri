@@ -224,16 +224,15 @@ $sb: space-between;
 }
 
 // TO:DO CONVERT TO SELF HOSTED FIREBASE DYNAMIC LINKS
-@mixin $remote {
- $icon:  url('https://tinyurl.com/gf-icons');
- $serif: url('https://tinyurl.com/gf-serif');
- $sans:  url('https://tinyurl.com/gf-sans');
- $mono:  url('https://tinyurl.com/gf-mono');
-}
+/*@import  $icon:  url('https://tinyurl.com/gf-icons');
+@import  $serif: url('https://tinyurl.com/gf-serif');
+@import  $sans:  url('https://tinyurl.com/gf-sans');
+@import  $mono:  url('https://tinyurl.com/gf-mono');
+
 
 $ms: src url(../$1/@FF/ms.woff2) format('woff2');
 $ss: src url(../$1/@FF/ss.woff2) format('woff2');
 $s:  src url(../$1/@FF/s.woff2) format('woff2');
 $i:  src url(../$1/@FF/i.woff2) format('woff2');
 $b:  src url(../$1/@FF/b.woff2) format('woff2');
-
+*/

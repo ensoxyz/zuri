@@ -4,7 +4,7 @@
 //| ES6	   96.07% | FireFox 04.26% |                |                  |
 //| ERLANG 00.10% | Edge    01.91% |                |                  |
 
-@import _0/UTIL
+@import '_0/UTIL';
 
 // ARCHITCTURE | DOING |
 //  - ZERO     | DONE  |
@@ -36,19 +36,19 @@
 // TYPOGRAPHY  |
 
 
-$base: 16px
-$minw: $base * 20
-$maxw: $base * 376
-$minh: $base * 30
+$base: 16px;
+$minw: $base * 20;
+$maxw: $base * 376;
+$minh: $base * 30;
 
-$c: $base * 180
+$c: $base * 180;
 
-$box: border-box
+$box: border-box;
 
-$dark-mode: false
+$dark-mode: false;
 
-$nav-x: auto
-$nav-y: auto
+$nav-x: auto;
+$nav-y: auto;
 
 
 // @import icon
@@ -66,8 +66,8 @@ $nav-y: auto
 //      color:			$_blk
 
 
-@import _0/BASE
-@import _1/AURA
-@import _2/EXPO
-@import _3/_XYZ
-@import _0/INFO
+@import '_0/BASE';
+//@import '_1/AURA';
+//@import '_2/EXPO';
+//@import '_3/_XYZ';
+//@import '_0/INFO';

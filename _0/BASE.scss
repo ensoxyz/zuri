@@ -1,4 +1,4 @@
-@import ../_0/ZERO
+@import '../_0/ZERO';
 
 html, body{
   min-height: 100%;
@@ -9,7 +9,7 @@ html, body{
 }
 
 html{
-  $dm($bg, $fg, $dark-mode)
+  //$dm($bg, $fg, $dark-mode)
   width: 100%;
 }
 
@@ -25,9 +25,9 @@ body *{
     }
 }
 
-// @import ../_2/ARCH
-// @import ../_1/TYPE
-// @import ../_1/LIST
-// @import ../_1/FORM
-// @import ../_1/TABLE
-// @import ../_1/MEDIA
+// @import '../_2/ARCH';
+// @import '../_1/TYPE';
+// @import '../_1/LIST';
+// @import '../_1/FORM';
+// @import '../_1/TABLE';
+// @import '../_1/MEDIA';

@@ -1,0 +1,216 @@
+$vip: !important
+
+$clr: transparent
+
+$blk: 022,022,022
+$wht: 249,246,239 
+$gry: 105,101,094
+
+$r_1: 255,205,210 // red_magenta_pink
+$r_2: 239,154,154
+$r_3: 229,115,115
+$r_4: 239,083,080
+$r_5: 244,067,054
+$r_6: 229,057,053
+$r_7: 211,047,047
+$r_8: 198,040,040
+$r_9: 183,028,028
+
+$o_1: 255,224,178 // orange_brown_creamsicle
+$o_2: 255,204,128
+$o_3: 255,183,077
+$o_4: 255,167,038
+$o_5: 255,152,000
+$o_6: 251,140,000
+$o_7: 245,124,000
+$o_8: 239,108,000
+$o_9: 230,081,000
+
+$y_1: 255,252,168 // yellow_neon_gold_tan
+$y_2: 255,248,153
+$y_3: 255,241,112
+$y_4: 255,232,071
+$y_5: 255,221,031
+$y_6: 255,215,010
+$y_7: 245,200,000
+$y_8: 224,182,000
+$y_9: 204,163,000
+
+$g_1: 235,255,168 // green_lime_seafoam_mint
+$g_2: 219,255,153
+$g_3: 197,247,121
+$g_4: 170,236,090
+$g_5: 140,223,063
+$g_6: 107,206,039
+$g_7: 079,172,032
+$g_8: 053,138,025
+$g_9: 032,104,018
+
+$b_1: 187,222,251 // blue_cyan_skyblue
+$b_2: 144,202,249
+$b_3: 100,181,246
+$b_4: 066,165,245
+$b_5: 033,150,243
+$b_6: 030,136,229
+$b_7: 025,118,210
+$b_8: 021,101,192
+$b_9: 013,071,161
+
+$i_1: 178,235,242 // deep_blue_indigo
+$i_2: 128,222,234
+$i_3: 077,208,225
+$i_4: 038,198,218
+$i_5: 000,188,212
+$i_6: 000,172,193
+$i_7: 000,151,167
+$i_8: 000,131,143
+$i_9: 000,096,100
+
+$v_1: 255,190,231 // purple_violet_mauve
+$v_2: 206,147,216
+$v_3: 186,104,200
+$v_4: 171,071,188
+$v_5: 156,039,176
+$v_6: 142,036,170
+$v_7: 123,031,161
+$v_8: 106,027,154
+$v_9: 074,020,140
+
+@mixin w($x,$y,$z)
+  max-width:   $x
+  min-width:   $y
+  width:       $z
+
+@mixin ww($x)
+  max-width:   $x
+  min-width:   $x
+  width:       $x
+
+@mixin h($x,$y,$z)
+  max-height:  $x
+  min-height:  $y
+  height:      $z
+
+@mixin hh($x,$y,$z)
+  max-height:  $x
+  min-height:  $x
+  height:      $x
+
+@mixin wh($x,$y,$z)
+  max-width:   $x
+  max-height:  $x
+  min-width:   $y
+  min-height:  $y
+  width:       $z
+  height:      $z
+
+@mixin nav($x,$y)
+  width:       $x
+  height:      $y
+
+@mixin sqr($x)
+  max-height:  $x
+  min-height:  $x
+  max-width:   $x
+  min-width:   $x
+  height:      $x
+  width:       $x
+
+@mixin sqrh($x)
+  max-height:  $x
+  min-height:  $x
+  max-width:   100%
+  min-width:   100%
+  height:      $x
+  width:       100%
+
+@mixin sqrw($x)
+  max-height:  100%
+  min-height:  100%
+  max-width:   $x
+  min-width:   $x
+  height:      100%
+  width:       $x
+
+@mixin rct($x)
+  max-height:  $x
+  min-height:  $x
+  height:      $x
+  max-width:   calc($x / 3)
+  min-width:   calc($x / 3)
+  width:       calc($x / 3)
+
+@mixin column($base)
+  max-width: calc($base * 40)
+  min-width: $minw
+  width:     100%
+
+@mixin m($t,$r,$b,$l)
+  margin: $t $r $b $l
+
+@mixin sqrm($x)
+  margin: $x $x $x $x
+
+@mixin p($t,$r,$b,$l)
+  padding: $t $r $b $l
+
+@mixin sqrp($x)
+  padding: $x $x $x $x
+
+@mixin b($t,$r,$b,$l,$s,$c)
+  border-width: $t $r $b $l
+  border-style: $s
+  border-color: $c
+
+@mixin sqrb($w,$s,$c)
+  border-width: $w
+  border-style: $s
+  border-color: $c
+
+@mixin blr($r,$l,$x,$y)
+  border-right:  $r $x $y
+  border-left:   $l $x $y
+
+@mixin btb($t,$b,$x,$y)
+  border-top:    $t $x $y
+  border-bottom: $b $x $y
+
+a
+  text-decoration: none $vip
+
+input 
+  background-color: $clr $vip
+
+$fs: flex-start
+$fc: center
+$fe: flex-end
+$se: space-evenly
+$sa: space-around
+$sb: space-between
+
+@mixin f($a,$b,$c,$x,$y,$z)
+  display:         $a
+  flex-flow:       $b $c
+  justify-content: $x
+  align-content:   $y
+  align-items:     $z
+
+@mixin i($a,$b,$c,$x,$y)
+  flex:            $a $b $c
+  order:           $x
+  align-items:     $y
+
+
+// TO:DO CONVERT TO SELF HOSTED FIREBASE DYNAMIC LINKS
+/*@mixin $remote
+ $icon:  url('https://tinyurl.com/gf-icons')
+ $serif: url('https://tinyurl.com/gf-serif')
+ $sans:  url('https://tinyurl.com/gf-sans')
+ $mono:  url('https://tinyurl.com/gf-mono')*/
+
+// $ms: src url(../$1/@FF/ms.woff2) format('woff2')
+// $ss: src url(../$1/@FF/ss.woff2) format('woff2')
+// $s:  src url(../$1/@FF/s.woff2) format('woff2')
+// $i:  src url(../$1/@FF/i.woff2) format('woff2')
+// $b:  src url(../$1/@FF/b.woff2) format('woff2')
+

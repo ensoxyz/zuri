@@ -1,6 +1,6 @@
 @import '../_0/ZERO';
 
-html, body{
+html, body {
   min-height: 100%;
   min-width: $minw;
   max-width: $maxw; 
@@ -8,21 +8,21 @@ html, body{
   margin: auto;
 }
 
-html{
-  //$dm($bg, $fg, $dark-mode)
+html {
+  @mixin($bg, $fg, $darkmode)
   width: 100%;
 }
 
-body{
+body {
   width: auto;
 }
 
-body *{
+body * {
   scrollbar-width: none;
 
   ::-webkit-scrollbar{
     display: none;
-    }
+  }
 }
 
 // @import '../_2/ARCH';

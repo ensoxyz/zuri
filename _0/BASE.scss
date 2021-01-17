@@ -21,10 +21,3 @@ body {
 body * {
   @include    xsb($xsb)
 }
-
-// @import '../_2/ARCH';
-// @import '../_1/TYPE';
-// @import '../_1/LIST';
-// @import '../_1/FORM';
-// @import '../_1/TABLE';
-// @import '../_1/MEDIA';

@@ -136,56 +136,28 @@
 }
 
 @mixin xsb($xsb) {
-  @if xsb {
+  @if $xsb == true {
+  -ms-overflow-style: none;
   scrollbar-width: none;
+  overflow: hidden;
     ::-webkit-scrollbar{
       display: none;
     }
   } 
 }
 
-
 // DARK MODE
-
-@function bg($bg) {
-  $bg: $bg;
-  @return $bg;
-}
-@function fg($fg) {
-  $fg: $fg;
-  @return $fg
-}
-
-@mixin dm($bg, $fg, $dark-mode: false) {  
-  @if dark-mode {
+@mixin dm($bg, $fg, $dark-mode) {  
+  @if $dark-mode == true {
     $bg: $blk;
     $fg: $wht;
-    background-color: bg($bg);
-    color:            fg($fg);
-  } @else {
-    $bg: $blk;
-    $fg: $wht;
-    background-color: bg($bg);
-    color:            fg($fg);
+    background-color: unquote('rgb(#{$bg})');
+    color:            unquote('rgb(#{$fg})');
+  }@else {
+    background-color: unquote('rgb(#{$bg})');
+    color:            unquote('rgb(#{$fg})');
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

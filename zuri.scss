@@ -46,8 +46,6 @@ $fc: center;
 $nav-x: auto;
 $nav-y: auto;
 
-
-
 $clr: transparent;
 
 $blk: 022,022,022;
@@ -124,15 +122,15 @@ $v_7: 123,031,161;
 $v_8: 106,027,154;
 $v_9: 074,020,140;
 
-$bg: $wht $vip;
-$fg: $blk $vip;
+$bg: $wht;
+$fg: $blk;
 
 $dark-mode: false;
 
 @import '_0/UTIL';
 @import '_0/ZERO';
 @import '_0/BASE';
-@import '_0/INFO';
 @import '_1/ARCH';
+@import '_1/EXPO';
 //@import '_2/_XYZ';
 //@import '_3/AURA';

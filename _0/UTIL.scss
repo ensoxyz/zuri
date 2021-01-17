@@ -135,15 +135,38 @@
   align-items:     $y;
 }
 
+@mixin xsb($xsb) {
+  @if xsb {
+  scrollbar-width: none;
+    ::-webkit-scrollbar{
+      display: none;
+    }
+  } 
+}
+
+
 // DARK MODE
+
+@function bg($bg) {
+  $bg: $bg;
+  @return $bg;
+}
+@function fg($fg) {
+  $fg: $fg;
+  @return $fg
+}
+
 @mixin dm($bg, $fg, $dark-mode: false) {  
   @if dark-mode {
-    background-color: $blk
-    color:            $wht
-  }
-  @else {
-    background-color: $wht
-    color:            $blk
+    $bg: $blk;
+    $fg: $wht;
+    background-color: bg($bg);
+    color:            fg($fg);
+  } @else {
+    $bg: $blk;
+    $fg: $wht;
+    background-color: bg($bg);
+    color:            fg($fg);
   }
 }
 

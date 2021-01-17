@@ -8,29 +8,30 @@
 
 article, aside, details, div, footer, header, 
 hgroup, iframe, main, nav, section {
- @mixin  wh(100%, 1rem, auto);
+  @include    wh(100%, 1rem, auto);
   display:    block;
-  margin:    auto;
+  margin:     auto;
 }
 
 iframe {
-  @mixin sqr(100%);
+  @include    sqr(100%);
   position:   relative;
   overflow:   hidden;
 }
 
-nav {
+/*nav {
   nav(nav-x, nav-y);
 }
+*/
 
 section {
-    text-align: justify;
-    position: relative;
-	overflow: hidden;
+  text-align: justify;
+  position:   relative;
+  overflow:   hidden;
 }
 
 span {
- @mixin  wh(100%, 1rem, auto);
+  @include    wh(100%, 1rem, auto);
   display:    inline;
 }
 

@@ -12,17 +12,17 @@
 
 
 html {
-  @mixin sqrp(1px);
-  font-family HKNova;
+  @include sqrp(1px);
+  font-family: HKNova;
 }
 
 body {
-  @mixin sqrb(1px,dashed,rgba(48,48,48,0.96));
-  @mixin sqrp(1px);
+  @include sqrb(1px,dashed,rgba(48,48,48,0.96));
+  @include sqrp(1px);
 }
 
 .canvas {
-  @mixin sqrb(0px,dashed,skyblue);
+  @include sqrb(0px,dashed,skyblue);
   background-image: url("logo.svg");
   background-repeat: repeat;
   background-size: 45px;
@@ -57,7 +57,7 @@ body {
 }
 
 .mondrian {
-  @mixin sqrb(1px,dashed,#888888);
+  @include sqrb(1px,dashed,#888888);
   background-image: url("logo.svg");
   background-repeat: repeat;
   background-size: 45px;

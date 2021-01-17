@@ -1,28 +1,25 @@
 @import '../_0/ZERO';
 
 html, body {
-  min-height: 100%;
-  min-width: $minw;
-  max-width: $maxw; 
-  height: 100%;
-  margin: auto;
+  min-height: $minh;
+  max-height: $maxh;
+  min-width:  $minw;
+  max-width:  $maxw; 
+  height:     100%;
+  margin:     auto;
 }
 
 html {
-  @mixin($bg, $fg, $darkmode)
-  width: 100%;
+  @include    dm($bg, $fg, $dark-mode);
+  width:      100%;
 }
 
 body {
-  width: auto;
+  width:      auto;
 }
 
 body * {
-  scrollbar-width: none;
-
-  ::-webkit-scrollbar{
-    display: none;
-  }
+  @include    xsb($xsb)
 }
 
 // @import '../_2/ARCH';

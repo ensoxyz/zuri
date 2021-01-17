@@ -27,10 +27,14 @@ züri - simply beautiful.
 
 $vip: !important;
 $box: border-box;
+$xsb: true;
 
 $base: 16px;
+$maxw: 100%;
+$maxh: 100%;
 $minw: $base * 20;
 $minh: $base * 30;
+
 
 $sb: space-between;
 $sa: space-around;
@@ -42,7 +46,7 @@ $fc: center;
 $nav-x: auto;
 $nav-y: auto;
 
-$dark-mode: false;
+
 
 $clr: transparent;
 
@@ -119,6 +123,11 @@ $v_6: 142,036,170;
 $v_7: 123,031,161;
 $v_8: 106,027,154;
 $v_9: 074,020,140;
+
+$bg: $wht $vip;
+$fg: $blk $vip;
+
+$dark-mode: false;
 
 @import '_0/UTIL';
 @import '_0/ZERO';

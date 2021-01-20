@@ -3,6 +3,17 @@
 //     /|
 
 
+$xyz:(
+  "t": "#{$t}",
+  "r": "#{$r}",
+  "b": "#{$b}",
+  "l": "#{$l}",
+);
+
+@each $_ in $xyz {
+
+}
+
 
 .x,.y,.z ul{
   list-style: none;
@@ -10,6 +21,6 @@
   margin: 0;
 }
 
-@import '../_2/X'
-@import '../_2/Y'
-@import '../_2/Z'
+//@import '../_2/X'
+//@import '../_2/Y'
+//@import '../_2/Z'

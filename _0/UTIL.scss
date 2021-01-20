@@ -1,22 +1,52 @@
+// POSITION
+@mixin xyz($t,$r,$b,$l,$p,$z) {
+  top:      $t;
+  right:    $r; 
+  bottom:   $b; 
+  left:     $l;
+  position: $p;
+  z-index:  $z;
+}
+
+//@mixin tr()
+//@mixin tl()
+//@mixin bl()
+//@mixin br()
+//@mixin _l()
+//@mixin _r()
+
+
+
+
+
+
+
+
+// FLEX-BOX
+@mixin f($a,$b,$c,$x,$y,$z) {
+  display:         $a;
+  flex-flow:       $b $c;
+  justify-content: $x;
+  align-content:   $y;
+  align-items:     $z;
+}
+@mixin i($a,$b,$c,$x,$y) {
+  flex:            $a $b $c;
+  order:           $x;
+  align-items:     $y;
+}
+
+
+
 @mixin w($x,$y,$z) {
   max-width:   $x;
   min-width:   $y;
   width:       $z;
 }
-@mixin ww($x) {
-  max-width:   $x;
-  min-width:   $x;
-  width:       $x;
-}
 @mixin h($x,$y,$z) {
   max-height:  $x;
   min-height:  $y;
   height:      $z;
-}
-@mixin hh($x) {
-  max-height:  $x;
-  min-height:  $x;
-  height:      $x;
 }
 @mixin wh($x,$y,$z) {
   max-width:   $x;
@@ -59,106 +89,74 @@
   width:       calc($x / 3);
 }
 
-@mixin column($base) {
+@mixin triptych($base) {
   max-width: calc($base * 40);
   min-width: $minw;
   width:     100%;
 }
 
 
-// margin
+
+
+
+
+
+
+// MARGIN
 @mixin m($t,$r,$b,$l) {
   margin: $t $r $b $l;
 }
-
 @mixin sqrm($x) {
   margin: $x $x $x $x;
 }
 
-// padding
+// PADDING
 @mixin p($t,$r,$b,$l) {
   padding: $t $r $b $l;
 }
-
 @mixin sqrp($x) {
   padding: $x $x $x $x;
 }
 
-// BORDER
+
+
+
+
+
+
+// BORDERS
 @mixin b($t,$r,$b,$l,$s,$c) {
   border-width: $t $r $b $l;
   border-style: $s;
   border-color: $c;
 }
-
+@mixin blr($r,$l,$x,$y) {
+  border-right:  $r $x $y;
+  border-left:   $l $x $y;
+}
+@mixin btb($t,$b,$x,$y) {
+  border-top:    $t $x $y;
+  border-bottom: $b $x $y;
+}
 @mixin sqrb($w,$s,$c) {
   border-width: $w;
   border-style: $s;
   border-color: $c;
 }
-
-@mixin blr($r,$l,$x,$y) {
-  border-right:  $r $x $y;
-  border-left:   $l $x $y;
+@mixin br($t,$r,$b,$l) {
+  border-radius: $t $r $b $l;
 }
 
-@mixin btb($t,$b,$x,$y) {
-  border-top:    $t $x $y;
-  border-bottom: $b $x $y;
-}
 
-// flex
-@mixin f($a,$b,$c,$x,$y,$z) {
-  display:         $a;
-  flex-flow:       $b $c;
-  justify-content: $x;
-  align-content:   $y;
-  align-items:     $z;
-}
-
-@mixin i($a,$b,$c,$x,$y) {
-  flex:            $a $b $c;
-  order:           $x;
-  align-items:     $y;
-}
-
-@mixin iosTextSizeAdjust($x) {
-  // iOS -> Text Size
-  -webkit-text-size-adjust: $x;
-  -ms-text-size-adjust:     $x;
-}
-
-@mixin typography($ff) {
-  font-family: $ff;
-  font-size: 62.5%;
-}
-
-@mixin xsb($xsb) { 
-  @if $xsb == true {
-  -ms-overflow-style: none;
-  scrollbar-width:    none;
-  overflow:           hidden;
-    ::-webkit-scrollbar {
-      display:        none;
-    }
-  } 
-}
-
-// DARK MODE
-@mixin dm($bg, $fg, $dark-mode) {  
-  @if $dark-mode == true {
-    $bg: $blk;
-    $fg: $wht;
-    background-color: unquote('rgb(#{$bg})');
-    color:            unquote('rgb(#{$fg})');
-  }@else if $bg == $wht && $fg == $blk {
-    background-color: unquote('rgb(#{$bg})');
-    color:            unquote('rgb(#{$fg})');
-  }@else {
+// FORM
+// blu / org / red /grn
+@mixin form($form) {
+	@if $form == true {
+    // BORG
+	}@else {
     $bg: $bg;
     $fg: $fg;
-    // test 
-  }
+	}
 }
 
 // TYPE
@@ -179,16 +177,43 @@
 	}
 }
 
-// FORM
-// blu / org / red /grn
-@mixin form($form) {
-	@if $form == true {
-    // BORG
-	}@else {
+
+
+
+
+// DARK MODE
+@mixin dm($bg, $fg, $dark-mode) {  
+  @if $dark-mode == true {
+    $bg: $blk;
+    $fg: $wht;
+    background-color: unquote('rgb(#{$bg})');
+    color:            unquote('rgb(#{$fg})');
+  }@else if $bg == $wht && $fg == $blk {
+    background-color: unquote('rgb(#{$bg})');
+    color:            unquote('rgb(#{$fg})');
+  }@else {
     $bg: $bg;
     $fg: $fg;
-	}
+    // test 
+  }
 }
+
+@mixin iosTextSizeAdjust($x) {
+  // iOS -> Text Size
+  -webkit-text-size-adjust: $x;
+  -ms-text-size-adjust:     $x;
+}
+@mixin typography($ff) {
+  font-family: $ff;
+  font-size: 62.5%;
+}
+
+
+
+
+
+
+
 
 
 
@@ -209,37 +234,7 @@
   }
 }
 
-$t: ;
-$r: ;
-$b: ;
-$l: ;
 
-// POSITION
-@mixin xyz($t,$r,$b,$l,$p,$z) {
-  top:      $t;
-  right:    $r; 
-  bottom:   $b; 
-  left:     $l;
-  position: $p;
-  z-index:  $z;
-}
-
-//@mixin tr()
-//@mixin tl()
-//@mixin bl()
-//@mixin br()
-//@mixin _l()
-//@mixin _r()
-$xyz:(
-  "t": "#{$t}",
-  "r": "#{$r}",
-  "b": "#{$b}",
-  "l": "#{$l}",
-);
-
-@each $_ in $xyz {
-
-}
 
 // TO:DO CONVERT TO SELF HOSTED FIREBASE DYNAMIC LINKS
 /*@import  $icon:  url('https://tinyurl.com/gf-icons');
@@ -282,3 +277,15 @@ $b:  src url(../$1/@FF/b.woff2) format('woff2');
   
 }
 */
+
+
+@mixin xsb($xsb) { 
+  @if $xsb == true {
+  -ms-overflow-style: none;
+  scrollbar-width:    none;
+  overflow:           hidden;
+    ::-webkit-scrollbar {
+      display:        none;
+    }
+  } 
+}

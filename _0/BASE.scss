@@ -1,21 +1,25 @@
-@import '../_0/ZERO';
+// | html  | body  |
 
 html, body {
-  min-height: $minh;
-  max-height: $maxh;
-  min-width:  $minw;
-  max-width:  $maxw; 
-  height:     100%;
-  margin:     auto;
+  min-height:  $minh;
+  max-height:  $maxh;
+  min-width:   $minw;
+  max-width:   $maxw; 
+  height:      100%;
+  margin:      auto;
 }
 
 html {
-  @include    dm($bg, $fg, $dark-mode);
-  width:      100%;
+  @include     dm($bg, $fg, $dark-mode);
+  @include     iosTextSizeAdjust(100%);
+  @include     typography($ss);
+  width:       100%;
 }
 
 body {
-  width:      auto;
+  line-height: 1.6;
+  font-size:   1.6rem;
+  width:       auto;
 }
 
 body * {

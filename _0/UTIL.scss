@@ -1,28 +1,23 @@
-// W&H
 @mixin w($x,$y,$z) {
   max-width:   $x;
   min-width:   $y;
   width:       $z;
 }
-
-@mixin h($x,$y,$z) {
-  max-height:  $x;
-  min-height:  $y;
-  height:      $z;
-}
-
 @mixin ww($x) {
   max-width:   $x;
   min-width:   $x;
   width:       $x;
 }
-
+@mixin h($x,$y,$z) {
+  max-height:  $x;
+  min-height:  $y;
+  height:      $z;
+}
 @mixin hh($x) {
   max-height:  $x;
   min-height:  $x;
   height:      $x;
 }
-
 @mixin wh($x,$y,$z) {
   max-width:   $x;
   max-height:  $x;
@@ -31,7 +26,6 @@
   width:       $z;
   height:      $z;
 }
-
 @mixin sqr($x) {
   max-height:  $x;
   min-height:  $x;
@@ -40,7 +34,6 @@
   height:      $x;
   width:       $x;
 }
-
 @mixin sqrh($x) {
   max-height:  $x;
   min-height:  $x;
@@ -49,7 +42,6 @@
   height:      $x;
   width:       100%;
 }
-
 @mixin sqrw($x) {
   max-height:  100%;
   min-height:  100%;
@@ -58,7 +50,6 @@
   height:      100%;
   width:       $x;
 }
-
 @mixin rct($x) {
   max-height:  $x;
   min-height:  $x;
@@ -74,12 +65,8 @@
   width:     100%;
 }
 
-@mixin nav($x,$y) {
-  width:       $x;
-  height:      $y;
-}
 
-// MARGIN
+// margin
 @mixin m($t,$r,$b,$l) {
   margin: $t $r $b $l;
 }
@@ -88,7 +75,7 @@
   margin: $x $x $x $x;
 }
 
-// PADDING
+// padding
 @mixin p($t,$r,$b,$l) {
   padding: $t $r $b $l;
 }
@@ -120,7 +107,7 @@
   border-bottom: $b $x $y;
 }
 
-// FLEX BOX
+// flex
 @mixin f($a,$b,$c,$x,$y,$z) {
   display:         $a;
   flex-flow:       $b $c;
@@ -135,13 +122,24 @@
   align-items:     $y;
 }
 
-@mixin xsb($xsb) {
+@mixin iosTextSizeAdjust($x) {
+  // iOS -> Text Size
+  -webkit-text-size-adjust: $x;
+  -ms-text-size-adjust:     $x;
+}
+
+@mixin typography($ff) {
+  font-family: $ff;
+  font-size: 62.5%;
+}
+
+@mixin xsb($xsb) { 
   @if $xsb == true {
   -ms-overflow-style: none;
-  scrollbar-width: none;
-  overflow: hidden;
-    ::-webkit-scrollbar{
-      display: none;
+  scrollbar-width:    none;
+  overflow:           hidden;
+    ::-webkit-scrollbar {
+      display:        none;
     }
   } 
 }
@@ -153,13 +151,95 @@
     $fg: $wht;
     background-color: unquote('rgb(#{$bg})');
     color:            unquote('rgb(#{$fg})');
-  }@else {
+  }@else if $bg == $wht && $fg == $blk {
     background-color: unquote('rgb(#{$bg})');
     color:            unquote('rgb(#{$fg})');
+  }@else {
+    $bg: $bg;
+    $fg: $fg;
+    // test 
   }
 }
 
+// TYPE
+// monochrome + opacity
+@mixin type($type) {
+	@if $type == true {
+		//$link: 
+		//$hover:
+		//$focus:
+		//$active:
+		//$visited:
+	}@else {
+    	//$link: 
+		//$hover:
+		//$focus:
+		//$active:
+		//$visited:
+	}
+}
 
+// FORM
+// blu / org / red /grn
+@mixin form($form) {
+	@if $form == true {
+    // BORG
+	}@else {
+    $bg: $bg;
+    $fg: $fg;
+	}
+}
+
+
+
+// LIST | TABLES
+@mixin nav($nav) {
+  @if $nav == true {
+    @include    sqrh($nav-h);
+    top:        top;
+  }@else if $nav == true {
+    @include    sqrh($nav-h);
+    bottom:     0;
+  }@else if $nav == true {
+    @include    sqrw($nav-w);
+    left:       0;
+  }@else if $nav == true {
+    @include    sqrw($nav-w);
+    right:      0;
+  }
+}
+
+$t: ;
+$r: ;
+$b: ;
+$l: ;
+
+// POSITION
+@mixin xyz($t,$r,$b,$l,$p,$z) {
+  top:      $t;
+  right:    $r; 
+  bottom:   $b; 
+  left:     $l;
+  position: $p;
+  z-index:  $z;
+}
+
+//@mixin tr()
+//@mixin tl()
+//@mixin bl()
+//@mixin br()
+//@mixin _l()
+//@mixin _r()
+$xyz:(
+  "t": "#{$t}",
+  "r": "#{$r}",
+  "b": "#{$b}",
+  "l": "#{$l}",
+);
+
+@each $_ in $xyz {
+
+}
 
 // TO:DO CONVERT TO SELF HOSTED FIREBASE DYNAMIC LINKS
 /*@import  $icon:  url('https://tinyurl.com/gf-icons');
@@ -173,4 +253,32 @@ $ss: src url(../$1/@FF/ss.woff2) format('woff2');
 $s:  src url(../$1/@FF/s.woff2) format('woff2');
 $i:  src url(../$1/@FF/i.woff2) format('woff2');
 $b:  src url(../$1/@FF/b.woff2) format('woff2');
+
+
+.article-print{
+
+  create a mixin that iterates through styles
+
+}
+.arctcle-magazine{
+
+}
+.article-technical{
+
+}
+
+.aside-l{
+  create l/r push pull mixin
+}
+.aside-r{
+}
+
+.footer, header{
+  create placement mixin
+}
+.hgroup{
+  text-book
+  magazine
+  
+}
 */

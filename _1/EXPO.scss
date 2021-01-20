@@ -4,26 +4,39 @@
 // .           ·		        ·		         ·						. 
 // | svg	 		 | video    	|            |            | 
 
+audio, 
+canvas,
+progress,
+video{
+  vertical-align:  baseline;
+} 
+
+audio:not([controls]) {
+  display:         none;
+  height:          0;
+}
+
 img {
-  @include w(100%, c/45, 100%);
-  @include h(100%, c/45, auto);
-  object-fit: cover;
-  display: block;
+  @include         w(100%, c/45, 100%);
+  @include         h(100%, c/45, auto);
+  object-fit:      cover;
+  display:         block;
 }
 video {
   background-color: #000;
-  object-fit: cover;
-  opacity: 0.9;
-  @include sqr(100%);
+  object-fit:       cover;
+  opacity:          0.9;
+  @include          sqr(100%);
 }
 #mp4 {
-  @include w(960px, 320px, 100%);
-  @include h(960px, 160px, 100%);
+  @include          w(960px, 320px, 100%);
+  @include          h(960px, 160px, 100%);
   background-color: pink;
-}
+ }
+
 #expo {
-  @include f(flex, row, nowrap, se, fc, fc);
-  @include w(c, c / 9, 100%);
-  @include h(100%, c / 6, 100%);
-  @include sqrp(1px);
+  @include          f(flex, row, nowrap, se, fc, fc);
+  @include          w(c, c / 9, 100%);
+  @include          h(100%, c / 6, 100%);
+  @include          sqrp(1px);
 }

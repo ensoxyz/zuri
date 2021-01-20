@@ -25,6 +25,13 @@ züri - simply beautiful.
 //  - TYPE     | TO:DO |
 //  - ICONS    | TO:DO | 
 
+@charset "utf-8";
+@import '_0/CDN';
+
+$ms: 'Share Tech Mono', monospace;
+$ss: 'Lexend Deca', sans-serif;
+$s:  'Playfair Display', serif;
+
 $vip: !important;
 $box: border-box;
 $xsb: true;
@@ -35,6 +42,13 @@ $maxh: 100%;
 $minw: $base * 20;
 $minh: $base * 30;
 
+$nav-xt: true;
+$nav-xb: true;
+$nav-yl: true; 
+$nav-yr: true; 
+$nav-w: 100%;
+$nav-h: 21px;
+$nav: $nav-x;
 
 $sb: space-between;
 $sa: space-around;
@@ -42,9 +56,6 @@ $se: space-evenly;
 $fs: flex-start;
 $fe: flex-end;
 $fc: center;
-
-$nav-x: auto;
-$nav-y: auto;
 
 $clr: transparent;
 
@@ -127,10 +138,37 @@ $fg: $blk;
 
 $dark-mode: false;
 
+$b_: $b_7
+$o_: $o_7
+$r_: $r_7
+$g_: $g_7
+
+$borg: true;
+$borg: $type;
+$borg: $form;
+$type: $borg;
+$form: $borg;
+
+// a:link
+$a_l: $blk;
+// a:hover
+$a_h: $blk;
+// a:focus
+$a_f: $blk;
+// a:active
+$a_a: $blk;
+// a:visited
+$a_v: $blk;
+
+
+
+
+
 @import '_0/UTIL';
 @import '_0/ZERO';
 @import '_0/BASE';
-@import '_1/ARCH';
-@import '_1/EXPO';
+//@import '_1/GRID';
+//@import '_1/ARCH';
+//@import '_1/EXPO';
 //@import '_2/_XYZ';
 //@import '_3/AURA';

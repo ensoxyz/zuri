@@ -216,6 +216,10 @@
   } 
 }
 
+@function rgba($_){
+  @return unquote('rgb(#{$_})')
+}
+
 // DARK MODE
 @mixin dm($bg, $fg, $dark-mode) {  
   @if $dark-mode == true {
@@ -223,7 +227,7 @@
     $fg: $wht;
     background-color: unquote('rgb(#{$bg})');
     color:            unquote('rgb(#{$fg})');
-  }@else if $bg == $wht && $fg == $blk {
+  }@else if $bg == $wht and $fg == $blk {
     background-color: unquote('rgb(#{$bg})');
     color:            unquote('rgb(#{$fg})');
   }@else {

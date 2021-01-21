@@ -217,7 +217,7 @@
 }
 
 @function rgba($_){
-  @return unquote('rgb(#{$_})')
+  @return unquote('rgb(#{$_})');
 }
 
 // DARK MODE

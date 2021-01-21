@@ -1,0 +1,16 @@
+//  | TABLE ____________________________________________|
+//  | col	     | colgroup   | table      | tbody        |
+//  ·          ·		        ·		         ·			        ·
+//  | td	 	   | tfoot   	  | th         | thead        |
+//  ·          ·		        ·		         ·			        ·
+//  | tr       |        	  |            |              |
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+td,
+th
+  padding: 0
+  &:not([align])
+    text-align: inherit

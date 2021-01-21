@@ -1,0 +1,37 @@
+//  | FORM _____________________________________________|
+//  | button     | fieldset   | form       | input      |
+//  ·            ·		      ·		       ·		    ·
+//  | label	 	 | legend     | meter      | optgroup   |
+//  ·            ·		      ·		       ·		    ·
+//  | option	 | output     | progress   | select     |
+//  ·            ·		      ·		       ·		    ·
+//  | textarea	 | time    	  |            |            |
+
+
+@mixin form($form) {
+	@if $form == true {
+    // BORG
+	}@else {
+    $bg: $bg;
+    $fg: $fg;
+	}
+}
+
+// button
+// button-group
+// fieldset
+// form
+// input
+// label
+// legend
+// meter
+// optgroup
+// option
+// output
+// progress
+// select
+// textarea
+// time
+
+
+

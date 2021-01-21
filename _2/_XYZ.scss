@@ -3,6 +3,19 @@
 //     /|
 
 
+// X        
+// Y        
+// Z        
+// CARD     
+// ALERT    
+// MODAL    
+// BADGE    
+// POPOVER  
+// SPINNER  
+// TOAST    
+// TOOLTIP  
+// COLLAPSE 
+// DROPDOWN
 
 $xyz:(
   "t": "#{$t}",
@@ -15,16 +28,8 @@ $xyz:(
 
 }
 
-
 .x,.y,.z ul{
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
-
-
-
-//@import '../_2/X'
-//@import '../_2/Y'
-//@import '../_2/Z'

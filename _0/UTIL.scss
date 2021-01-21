@@ -1,5 +1,3 @@
-// XYZ
-
 // WIDTH
 @mixin w($x,$y,$z) {
   max-width:   $x;
@@ -196,14 +194,14 @@
 }
 
 // TYPOGRAPHY
-@mixin iosTextSizeAdjust($x) {
-  // iOS -> Text Size
-  -webkit-text-size-adjust: $x;
-  -ms-text-size-adjust:     $x;
-}
 @mixin typography($ff) {
   font-family: $ff;
-  font-size: 62.5%;
+  font-size: $font;
+}
+
+@mixin iosTextSizeAdjust($x) {
+  -webkit-text-size-adjust: $x;
+  -ms-text-size-adjust:     $x;
 }
 
 // SCROLLBAR

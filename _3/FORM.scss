@@ -1,15 +1,3 @@
-/*
-| button     | fieldset   | form     | input    |
-|            ·		      ·		     ·						 
-| label	 	 | legend     | meter    | optgroup |
-|            ·		      ·		     ·						 
-| option	 | output     | progress | select   |
-|            ·		      ·		     ·						 
-| textarea	 | time    	  |          |          |
-*/
-
-// FORM
-// blu / org / red /grn
 @mixin form($form) {
 	@if $form == true {
     // BORG

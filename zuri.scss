@@ -1,49 +1,55 @@
-// ARCHITCTURE | DOING |
-//  - ZERO     | DONE  |
-//  - BASE     | DONE  |
-//  - ARCH     | DOING |
-//  - EXPO     | DOING |
-//  - GRID     | TO:DO |
-//  - WRPR     | TO:DO |
-//  - INFO     | DOING |
-
-// INTERACTION | TO:DO |
-//  - X        | TO:DO |
-//  - Y        | TO:DO |
-//  - Z        | TO:DO |
-
-// AESTHETICS  | TO:DO |
-//  - _ATT     | TO:DO | 
-//  - RGBA     | TO:DO |
-//  - LIST     | TO:DO |
-//  - FORM     | TO:DO |
-//  - TABLE    | TO:DO |
-//  - TYPE     | TO:DO |
-//  - ICONS    | TO:DO | 
-
-@charset 'utf-8';
+@charset "utf-8";
 @import '_0/FDL';
 
 $s:  'Playfair Display', serif;
 $ss: 'Lexend Deca', sans-serif;
 $ms: 'Share Tech Mono', monospace;
 
-$vip: !important;
+$vip: unquote('!important');
 $box: border-box;
 $xsb: true;
 
-// higher order concepts are most beneficial in terms of appending html
-/*
-more general style iterations that account 
-for font, color, dimension, porportion and 
-position... Print, Managazine, Technical 
-Artistic, etc... 
-*/
-$base: 1.6rem;
+$font:  62.5%; 
+$base:  1.6;
+
 $maxw: 100%;
 $maxh: 100%;
-$minw: $base * 20;
-$minh: $base * 30;
+$minw: $base * 200;
+$minh: $base * 300;
+
+$red: 255,017,000;
+$org: 255,079,000;
+$ylw: 255,187,000;
+$grn: 004,128,004;
+$blu: 000,042,255;
+$ind: 060,000,255;
+$vlt: 132,000,255;
+
+$blk: 022,022,022;
+$gry: 105,101,094;
+$wht: 249,246,239;
+
+$dark-mode: false;
+
+$bg: $wht;
+$fg: $blk;
+
+$a_l: $blk;
+$a_h: $blk;
+$a_f: $blk;
+$a_a: $blk;
+$a_v: $blk;
+
+$borg: true;
+$borg: $type;
+$borg: $form;
+$type: $borg;
+$form: $borg;
+
+$b_: $blu;
+$o_: $org;
+$r_: $red;
+$g_: $grn;
 
 $nav-xt: true;
 $nav-xb: true;
@@ -61,10 +67,6 @@ $fe: flex-end;
 $fc: center;
 
 $clr: transparent;
-
-$blk: 022,022,022;
-$gry: 105,101,094;
-$wht: 249,246,239;
 
 $r_1: 255,205,210;
 $r_2: 239,154,154;
@@ -136,52 +138,6 @@ $v_7: 123,031,161;
 $v_8: 106,027,154;
 $v_9: 074,020,140;
 
-$bg: $wht;
-$fg: $blk;
-
-$dark-mode: false;
-
-$b_: $b_7
-$o_: $o_7
-$r_: $r_7
-$g_: $g_7
-
-$borg: true;
-$borg: $type;
-$borg: $form;
-$type: $borg;
-$form: $borg;
-
-// a:link
-$a_l: $blk;
-// a:hover
-$a_h: $blk;
-// a:focus
-$a_f: $blk;
-// a:active
-$a_a: $blk;
-// a:visited
-$a_v: $blk;
-
-// border-radius
-// box-shadow
-// container
-// gradients
-
-
-/*
-Zuri is about establishing a
-baseline within the design system
-while openionated its in the most
-zen way imaginable. Classes extend
-the framework so that users can just
-append styles to the html or js.
-*/
-
-
-
-
-
 @import '_0/UTIL';
 @import '_0/ZERO';
 @import '_0/BASE';
@@ -190,9 +146,3 @@ append styles to the html or js.
 //@import '_1/EXPO';
 //@import '_2/_XYZ';
 //@import '_3/AURA';
-
-// | MEDIA QUERIES ___________________|
-// | Apple    | iPhone 4  | iPhone 12 |  
-// | Samsung  | Galaxy 8  | Galaxy 21 |
-// | Google   | Chrome 48 | Chrome 88 |
-// | Apple    | Safari 12 | Safari 14 |

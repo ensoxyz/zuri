@@ -1,53 +1,20 @@
-// POSITION
-@mixin xyz($t,$r,$b,$l,$p,$z) {
-  top:      $t;
-  right:    $r; 
-  bottom:   $b; 
-  left:     $l;
-  position: $p;
-  z-index:  $z;
-}
+// XYZ
 
-//@mixin tr()
-//@mixin tl()
-//@mixin bl()
-//@mixin br()
-//@mixin _l()
-//@mixin _r()
-
-
-
-
-
-
-
-
-// FLEX-BOX
-@mixin f($a,$b,$c,$x,$y,$z) {
-  display:         $a;
-  flex-flow:       $b $c;
-  justify-content: $x;
-  align-content:   $y;
-  align-items:     $z;
-}
-@mixin i($a,$b,$c,$x,$y) {
-  flex:            $a $b $c;
-  order:           $x;
-  align-items:     $y;
-}
-
-
-
+// WIDTH
 @mixin w($x,$y,$z) {
   max-width:   $x;
   min-width:   $y;
   width:       $z;
 }
+
+// HEIGHT
 @mixin h($x,$y,$z) {
   max-height:  $x;
   min-height:  $y;
   height:      $z;
 }
+
+// WIDTH & HEIGHT
 @mixin wh($x,$y,$z) {
   max-width:   $x;
   max-height:  $x;
@@ -56,6 +23,28 @@
   width:       $z;
   height:      $z;
 }
+
+// W - FH 
+@mixin wfh($w) {
+  max-height:  100%;
+  min-height:  100%;
+  max-width:   $w;
+  min-width:   $w;
+  height:      100%;
+  width:       $w;
+}
+
+// H - FW
+@mixin hfw($h) {
+  max-height:  $h;
+  min-height:  $h;
+  max-width:   100%;
+  min-width:   100%;
+  height:      $h;
+  width:       100%;
+}
+
+// SQUARE
 @mixin sqr($x) {
   max-height:  $x;
   min-height:  $x;
@@ -64,22 +53,8 @@
   height:      $x;
   width:       $x;
 }
-@mixin sqrh($x) {
-  max-height:  $x;
-  min-height:  $x;
-  max-width:   100%;
-  min-width:   100%;
-  height:      $x;
-  width:       100%;
-}
-@mixin sqrw($x) {
-  max-height:  100%;
-  min-height:  100%;
-  max-width:   $x;
-  min-width:   $x;
-  height:      100%;
-  width:       $x;
-}
+
+// RECTANGLE
 @mixin rct($x) {
   max-height:  $x;
   min-height:  $x;
@@ -89,135 +64,121 @@
   width:       calc($x / 3);
 }
 
-@mixin triptych($base) {
-  max-width: calc($base * 40);
-  min-width: $minw;
-  width:     100%;
+// TRBL
+@mixin trbl($t,$r,$b,$l,$z,$p) {
+  top:      $t;
+  right:    $r; 
+  bottom:   $b; 
+  left:     $l;
+  z-index:  $z;
+  position: $p;
 }
 
-
-
-
-
-
-
-
-// MARGIN
-@mixin m($t,$r,$b,$l) {
-  margin: $t $r $b $l;
+// TOP
+@mixin t($t,$z,$p) {
+  top:      $t;
+  z-index:  $z;
+  position: $p;
 }
-@mixin sqrm($x) {
-  margin: $x $x $x $x;
+@mixin tr($t,$r,$z,$p) {
+  top:      $t;
+  right:    $r;
+  z-index:  $z;
+  position: $p;
 }
-
-// PADDING
-@mixin p($t,$r,$b,$l) {
-  padding: $t $r $b $l;
+@mixin tl($t,$l,$z,$p) {
+  top:      $t;
+  left:     $l;
+  z-index:  $z;
+  position: $p;
 }
-@mixin sqrp($x) {
-  padding: $x $x $x $x;
-}
-
-
-
-
-
-
-
-// BORDERS
-@mixin b($t,$r,$b,$l,$s,$c) {
-  border-width: $t $r $b $l;
-  border-style: $s;
-  border-color: $c;
-}
-@mixin blr($r,$l,$x,$y) {
-  border-right:  $r $x $y;
-  border-left:   $l $x $y;
-}
-@mixin btb($t,$b,$x,$y) {
-  border-top:    $t $x $y;
-  border-bottom: $b $x $y;
-}
-@mixin sqrb($w,$s,$c) {
-  border-width: $w;
-  border-style: $s;
-  border-color: $c;
-}
-@mixin br($t,$r,$b,$l) {
-  border-radius: $t $r $b $l;
+@mixin tc($t,$z,$p) {
+  top:        $t;
+  left:       50%;
+  z-index:    $z;
+  position:   $p;
+  transform:  translateX(-50%);
 }
 
-
-// FORM
-// blu / org / red /grn
-@mixin form($form) {
-	@if $form == true {
-    // BORG
-	}@else {
-    $bg: $bg;
-    $fg: $fg;
-	}
+// RIGHT
+@mixin r($r,$z,$p) {
+  right:    $r;
+  z-index:  $z;
+  position: $p;
+}
+@mixin rc($r,$z,$p) {
+  right:      $r;
+  top:        50%;
+  z-index:    $z;
+  position:   $p;
+  transform:  translateY(-50%);
 }
 
-// TYPE
-// monochrome + opacity
-@mixin type($type) {
-	@if $type == true {
-		//$link: 
-		//$hover:
-		//$focus:
-		//$active:
-		//$visited:
-	}@else {
-    	//$link: 
-		//$hover:
-		//$focus:
-		//$active:
-		//$visited:
-	}
+// BOTTOM
+@mixin b($b,$z,$p) {
+  bottom:   $b;
+  z-index:  $z;
+  position: $p;
+}
+@mixin br($b,$r,$z,$p) {
+  bottom:   $b;
+  right:    $r;
+  z-index:  $z;
+  position: $p;
+}
+@mixin bl($b,$l,$z,$p) {
+  bottom:   $b;
+  left:     $l;
+  z-index:  $z;
+  position: $p;
+}
+@mixin bc($b,$z,$p) {
+  bottom:     $b;
+  left:       50%;
+  z-index:    $z;
+  position:   $p;
+  transform:  translateX(-50%);
 }
 
-
-
-
-
-// DARK MODE
-@mixin dm($bg, $fg, $dark-mode) {  
-  @if $dark-mode == true {
-    $bg: $blk;
-    $fg: $wht;
-    background-color: unquote('rgb(#{$bg})');
-    color:            unquote('rgb(#{$fg})');
-  }@else if $bg == $wht && $fg == $blk {
-    background-color: unquote('rgb(#{$bg})');
-    color:            unquote('rgb(#{$fg})');
-  }@else {
-    $bg: $bg;
-    $fg: $fg;
-    // test 
-  }
+// LEFT
+@mixin l($l,$z,$p) {
+  left:     $l;
+  z-index:  $z;
+  position: $p;
+}
+@mixin lc($l,$z,$p) {
+  left:       $l;
+  top:        50%;
+  z-index:    $z;
+  position:   $p;
+  transform:  translateY(-50%);
 }
 
-@mixin iosTextSizeAdjust($x) {
-  // iOS -> Text Size
-  -webkit-text-size-adjust: $x;
-  -ms-text-size-adjust:     $x;
+// CENTER
+@mixin cc($z,$p) {
+  top:        50%;
+  left:       50%;
+  z-index:    $z;
+  position:   $p;
+  transform:  translate(-50%,-50%);
 }
-@mixin typography($ff) {
-  font-family: $ff;
-  font-size: 62.5%;
+
+// FLEX
+@mixin f($a,$b,$c,$x,$y,$z) {
+  display:         $a;
+  flex-flow:       $b $c;
+  justify-content: $x;
+  align-content:   $y;
+  align-items:     $z;
 }
 
+@mixin i($a,$b,$c,$x,$y) {
+  flex:            $a $b $c;
+  order:           $x;
+  align-items:     $y;
+}
 
-
-
-
-
-
-
-
-
-// LIST | TABLES
+// NAVIGATION
 @mixin nav($nav) {
   @if $nav == true {
     @include    sqrh($nav-h);
@@ -234,51 +195,18 @@
   }
 }
 
-
-
-// TO:DO CONVERT TO SELF HOSTED FIREBASE DYNAMIC LINKS
-/*@import  $icon:  url('https://tinyurl.com/gf-icons');
-@import  $serif: url('https://tinyurl.com/gf-serif');
-@import  $sans:  url('https://tinyurl.com/gf-sans');
-@import  $mono:  url('https://tinyurl.com/gf-mono');
-
-
-$ms: src url(../$1/@FF/ms.woff2) format('woff2');
-$ss: src url(../$1/@FF/ss.woff2) format('woff2');
-$s:  src url(../$1/@FF/s.woff2) format('woff2');
-$i:  src url(../$1/@FF/i.woff2) format('woff2');
-$b:  src url(../$1/@FF/b.woff2) format('woff2');
-
-
-.article-print{
-
-  create a mixin that iterates through styles
-
+// TYPOGRAPHY
+@mixin iosTextSizeAdjust($x) {
+  // iOS -> Text Size
+  -webkit-text-size-adjust: $x;
+  -ms-text-size-adjust:     $x;
 }
-.arctcle-magazine{
-
-}
-.article-technical{
-
+@mixin typography($ff) {
+  font-family: $ff;
+  font-size: 62.5%;
 }
 
-.aside-l{
-  create l/r push pull mixin
-}
-.aside-r{
-}
-
-.footer, header{
-  create placement mixin
-}
-.hgroup{
-  text-book
-  magazine
-  
-}
-*/
-
-
+// SCROLLBAR
 @mixin xsb($xsb) { 
   @if $xsb == true {
   -ms-overflow-style: none;
@@ -288,4 +216,20 @@ $b:  src url(../$1/@FF/b.woff2) format('woff2');
       display:        none;
     }
   } 
+}
+
+// DARK MODE
+@mixin dm($bg, $fg, $dark-mode) {  
+  @if $dark-mode == true {
+    $bg: $blk;
+    $fg: $wht;
+    background-color: unquote('rgb(#{$bg})');
+    color:            unquote('rgb(#{$fg})');
+  }@else if $bg == $wht && $fg == $blk {
+    background-color: unquote('rgb(#{$bg})');
+    color:            unquote('rgb(#{$fg})');
+  }@else {
+    $bg: $bg;
+    $fg: $fg;
+  }
 }

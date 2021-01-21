@@ -8,6 +8,16 @@
 | textarea	 | time    	  |          |          |
 */
 
+// FORM
+// blu / org / red /grn
+@mixin form($form) {
+	@if $form == true {
+    // BORG
+	}@else {
+    $bg: $bg;
+    $fg: $fg;
+	}
+}
 
 // button
 // fieldset

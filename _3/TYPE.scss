@@ -20,6 +20,24 @@
 | sup        | u          | var        |            |
 */	
 
+// TYPE
+// monochrome + opacity
+@mixin type($type) {
+	@if $type == true {
+		//$link: 
+		//$hover:
+		//$focus:
+		//$active:
+		//$visited:
+	}@else {
+    	//$link: 
+		//$hover:
+		//$focus:
+		//$active:
+		//$visited:
+	}
+}
+
 $h6: $base;
 $h5: $h6 + 8;
 $h4: $h6 * 2;

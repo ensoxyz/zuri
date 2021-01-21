@@ -32,11 +32,13 @@ $vip: !important;
 $box: border-box;
 $xsb: true;
 
-$t: ;
-$r: ;
-$b: ;
-$l: ;
-
+// higher order concepts are most beneficial in terms of appending html
+/*
+more general style iterations that account 
+for font, color, dimension, porportion and 
+position... Print, Managazine, Technical 
+Artistic, etc... 
+*/
 $base: 1.6rem;
 $maxw: 100%;
 $maxh: 100%;
